@@ -13,8 +13,7 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
     |
     */
-
-    'title' => '商品管理',
+    'title' => 'Book Catalog',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -63,8 +62,9 @@ return [
     |
     */
 
-    'logo' => '<b>商品管理</b>',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo' => '<b>Book Catalog</b>',
+    // 'logo_img' => 'vendor/adminlte/dist/img/bookicon.png',
+    'logo_img' => 'img/bookicon.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -293,7 +293,15 @@ return [
         [
             'text' => '商品一覧',
             'url'  => 'items',
-            'icon' => 'fas fa-gamepad',
+            'icon' => 'fas fa-book-open',
+        ],
+    
+        [
+            // 'key' => 'お気に入り一覧_role1_only',
+            'text' => 'お気に入り一覧',
+            'url'  => 'bookmarks',
+            'icon' => 'far fa-heart',
+            'can' => 'general',
         ],
 
         // AdminLTEデフォルト

@@ -12,6 +12,7 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+
     /**
      * The attributes that are mass assignable.
      *
@@ -21,6 +22,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
     ];
 
     /**
@@ -42,4 +44,31 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function bookmarks()
+    {
+        return $this->hasMany(Bookmark::class);
+    }
+
+    // public function bookmark_items()
+    // {
+    //     return $this->belongsToMany(Bookmark::class, 'bookmarks', 'user_id', 'item_id');
+    // }
+
+    public function bookmark_items()
+    {
+        return $this->belongsToMany(Item::class, 'bookmarks', 'user_id', 'item_id');
+    }
+
+
+    public function is_bookmark($itemId)
+    {
+        return $this->bookmarks()->where('item_id', $itemId)->exists();
+    }
+
+
+    public function items() {
+        return $this->hasMany('App\Models\Item');
+    }
 }
+

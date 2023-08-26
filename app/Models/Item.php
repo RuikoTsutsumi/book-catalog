@@ -13,8 +13,11 @@ class Item extends Model
      */
     protected $fillable = [
         'user_id',
-        'name',
-        'type',
+        'title',
+        'image',
+        'price',
+        'category',
+        'author',
         'detail',
     ];
 
@@ -33,4 +36,9 @@ class Item extends Model
      */
     protected $casts = [
     ];
+
+    public function user() {
+        return $this->belongsTo('App\Models\User');
+    }
 }
+
