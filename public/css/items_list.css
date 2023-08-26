@@ -1,0 +1,43 @@
+td .table-hover{
+    display: inline-block; /* display: table-cell;から変更 */
+    height: 80px; /* セルの高さ */
+    overflow: auto; /* 高さがあふれた場合に自動的にスクロールバーを表示 */
+    box-sizing: border-box; /* borderがあると改行される事象を抑止 */
+    font-size: 16px;
+}
+.id{
+    width: 5%;
+}
+.title{
+    width: 25%;
+}
+.item_img{
+    width: 13%;
+}
+.price{
+    width: 7%;
+}
+.category{
+    width: 15%;
+}
+.author{
+    width: 12%;
+}
+.detail{
+    width: 7%;
+}
+.edit{
+    width: 7%;
+}
+.delete{
+    width: 7%;
+}
+
+.btn btn-outline-success{
+    width: 50%;
+    min-width: 200px;
+    max-width: 600px;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
