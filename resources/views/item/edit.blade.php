@@ -36,7 +36,8 @@
                     </div>
                     <div class=" form-group">
                         <label class="control-label">価格</label>
-                        <input class="form-control" type="number" name="price" value="{{$item->price}}">
+                        <input class="form-control" type="number" name="price" value="{{$item->price}}" oninput="javascript:if(this.value.length > this.maxLength)
+                        this.value = this.value.slice(0, this.maxLength);" maxlength="7" min="1" max="9999999">
                         <p>{{ $errors->first('price') }}</p>
                     </div>
                     <div class="form-group">
