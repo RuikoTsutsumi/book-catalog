@@ -103,7 +103,7 @@
 
                 <div class="card-footer">
                     <button type="submit" class="btn btn-warning btn-lg">登録</button>
-                    <a class="btn btn-secondary" href="http://127.0.0.1:8000/items"
+                    <a class="btn btn-secondary" href="https://book-catalog-91d5bc3f8f04.herokuapp.com/items"
                         style="margin-top: 2px; margin-left: 30px;">戻る</a>
 
                     <!-- <button class="btn btn-secondary" style="margin-left: 20px;" onClick="location.href='http://127.0.0.1:8000/items'">戻る</button> -->
