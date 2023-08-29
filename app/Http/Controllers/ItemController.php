@@ -188,7 +188,7 @@ class ItemController extends Controller
                 ->orWhere('author', 'LIKE', "%{$keyword}%");
         }
 
-        $items = $query->paginate(20);
+        $items = $query->paginate(20)->withQueryString();
 
         return view('item.index', compact('items', 'keyword'));
     }
