@@ -1,43 +1,39 @@
-## 商品管理システム
+# book-catalog
 
-### 環境構築手順
+## 概要
+このシステムでは、商品リストを表示します。
 
-* Gitクローン
-* .env.example をコピーして .env を作成
-* MySQLのデータベース作成（名前：item_management）
-* Macの場合 .env の DB_PASSWORD を root に修正（Windowsは修正不要）
+管理者は商品の新規登録から編集・削除を行うことができ、一般ユーザーは商品詳細情報の閲覧・お気に入り登録ができます。
 
-    ```INI
-    DB_PASSWORD=root
-    ```
+## 主な機能
+- ログイン・ログアウト機能
+- 商品一覧画面
+- 商品詳細表示機能
+- 商品新規登録機能
+- 商品編集機能
+- 商品削除機能
+- 商品検索機能
+- お気に入り登録機能
+- お気に入り削除機能
+- お気に入り一覧機能
 
-* APP_KEY生成
+## 開発環境
 
-    ```console
-    php artisan key:generate
-    ```
+- PHP 8.2.0
+- MySQL 14.14
+- Laravel 10.13.5
 
-* Composerインストール
+## 設計書
+[設計書ページへ]https://drive.google.com/drive/folders/1GLnEGCo8S4vQ-tysZeuvAX87-NZT4m5N
 
-    ```console
-    composer install
-    ```
+## システム閲覧
+[アプリケーションページへ]https://book-catalog-0a299a0d6fc0.herokuapp.com/login
 
-* フロント環境構築
+### テストアカウント情報
+#### <管理者>
+メールアドレス: techtaro@gmail.com
+パスワード: taropass
+#### <一般ユーザー>
+メールアドレス: techhanako@gmail.com
+パスワード: hanakopass
 
-    ```console
-    npm ci
-    npm run build
-    ```
-
-* マイグレーション
-
-    ```console
-    php artisan migrate
-    ```
-
-* 起動
-
-    ```console
-    php artisan serve
-    ```
