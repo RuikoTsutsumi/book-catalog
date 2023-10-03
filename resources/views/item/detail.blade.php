@@ -103,7 +103,9 @@
                 </table>
 
                 <div class="return-btn">
-                    <button class="btn btn-secondary" onClick="history.back();">戻る</button>
+                    <a class="btn btn-secondary" href="https://book-catalog-0a299a0d6fc0.herokuapp.com/items"
+                        style="margin-top: 2px; margin-left: 30px;">戻る</a>
+                    <!-- <button class="btn btn-secondary" onClick="history.back();">戻る</button> -->
                 </div>
                 <!-- <div class="input-group">
                 <label class="input-group-btn">
